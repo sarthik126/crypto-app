@@ -24,6 +24,7 @@ function CryptoTable() {
           <TableHead>
             <TableRow>
               <TableCell align="left">Rate</TableCell>
+              <TableCell align="left">Date</TableCell>
               <TableCell align="left">Time</TableCell>
             </TableRow>
           </TableHead>
@@ -35,7 +36,10 @@ function CryptoTable() {
               >
                 <TableCell align="left">$ {row.coinRate.toFixed(4)}</TableCell>
                 <TableCell align="left">
-                  {coinDateFormater(row.coinRateTime, " ")}
+                  {coinDateFormater(row.coinRateTime).split("\n")?.[0]}
+                </TableCell>
+                <TableCell align="left">
+                  {coinDateFormater(row.coinRateTime).split("\n")?.[1]}
                 </TableCell>
               </TableRow>
             ))}

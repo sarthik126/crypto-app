@@ -32,7 +32,7 @@ function CryptoChart() {
           {
             dataKey: "coinRate",
             label: "Price",
-            valueFormatter: (coinRate) => `$ ${coinRate?.toFixed(3)}`,
+            valueFormatter: (coinRate) => `$ ${coinRate?.toFixed(4).toString()}`,
           },
         ]}
       />

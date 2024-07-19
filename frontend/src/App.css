@@ -112,6 +112,19 @@ select {
 
 .coin-table tbody tr:nth-child(1) td:nth-child(2) {
   border-left: none !important;
+  border-right: none !important;
+}
+
+.coin-table tbody tr:nth-child(1) td:nth-child(3) {
+  border-left: none !important;
+}
+
+.loading{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Media Query for Mobile Devices */

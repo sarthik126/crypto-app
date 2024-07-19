@@ -53,10 +53,10 @@ function CryptoMain() {
   useEffect(() => {
     if (coinsAvailable.length === 0) return;
 
-    let coin = coinsAvailable[0];
+    let coin = selectedCoin ? selectedCoin : coinsAvailable[0];
     dispatch(fetchCoinData(coin));
     dispatch(setSelectedCoin(coin));
-  }, [coinsAvailable]);
+  }, [coinsAvailable, selectedCoin]);
 
   return (
     <div>
@@ -71,7 +71,7 @@ function CryptoMain() {
               <TollIcon />
               {selectedCoin}
             </div>
-            <select onChange={changeSelection}>
+            <select onChange={changeSelection} defaultValue={selectedCoin!}>
               {coinsAvailable.map((coin) => (
                 <option key={coin} value={coin}>
                   {coin}
