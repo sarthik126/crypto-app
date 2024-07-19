@@ -72,7 +72,7 @@ function CryptoMain() {
               {selectedCoin}
             </div>
             <select onChange={changeSelection} defaultValue={selectedCoin!}>
-              {coinsAvailable.map((coin) => (
+              {coinsAvailable?.map((coin) => (
                 <option key={coin} value={coin}>
                   {coin}
                 </option>

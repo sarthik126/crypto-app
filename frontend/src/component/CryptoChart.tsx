@@ -9,12 +9,12 @@ function CryptoChart() {
     (state: RootState) => state.coin.selectedCoinData
   );
 
-  const dataset = [
-    ...selectedCoinData.map((i) => ({
+  const dataset = selectedCoinData ? [
+    ...selectedCoinData?.map((i) => ({
       coinRate: i.coinRate,
       coinRateTime: i.coinRateTime,
     })),
-  ];
+  ] : [];
 
   return (
     <>

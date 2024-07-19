@@ -29,7 +29,7 @@ function CryptoTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {selectedCoinData.map((row) => (
+            {selectedCoinData?.map((row) => (
               <TableRow
                 key={row.coinRateTime}
                 sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
